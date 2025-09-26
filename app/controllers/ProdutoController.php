@@ -1,6 +1,9 @@
 <?php
      require_once('Venda.php');
      require_once('Produto.php');
+     require_once('PDO.php');
+     require_once('Conexao.php');
+
      if($_SERVER['REQUEST_METHOD']=='POST'){
         $id = $_POST['cx_id'];
         $nome = $_POST['cx_nome'];
@@ -12,13 +15,10 @@
         $p->registrar();
      }
 
-     function calcularTotal($venda){
-      //  $produto = buscarProduto();
-      //  $valorTotal = $produto -> valor * $venda -> quantidade; 
-     }
-
      function buscarProduto($nome){
-        // $produto = 
-        // return $produto;
+        $c = new Conexao();
+        $d = new Database($c);
+        $produto = $d->buscarProduto($nome);
+        return $produto;
      }
 ?>

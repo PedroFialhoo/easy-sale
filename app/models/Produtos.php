@@ -2,19 +2,22 @@
     require_once 'Conexao.php';
     class Produto{
 
+        public $id;
         public $nome;
         public $valor;
         public $estoque;
 
-        public function __construct($nome, $valor, $estoque) {
+        public function __construct($id, $nome, $valor, $estoque) {
+            $this->id = $id;
             $this->nome = $nome;
             $this->valor = $valor;
             $this->estoque = $estoque;
         }
 
-        public function registrar(){
-            // $dao = new Conexao();
-
+        public function registrar(){            
+            $c = new Conexao();
+            $d = new Database($c);
+            $d->inserirProduto($this->nome, $this->valor, $this->estoque);
         }
     }
 
