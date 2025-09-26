@@ -12,12 +12,13 @@
         $p->registrar();
      }
 
-     public function calcularTotal($venda){
-       $produto = buscarProduto();
-       $valorTotal = $produto -> valor * $venda -> quantidade; 
+     function calcularTotal($venda){
+      //  $produto = buscarProduto();
+      //  $valorTotal = $produto -> valor * $venda -> quantidade; 
      }
 
-     public function buscarProduto($idProduto){
-        
+     function buscarProduto($nome){
+        // $produto = 
+        // return $produto;
      }
 ?>

@@ -1,5 +1,5 @@
 <?php
-
+    require_once 'Conexao.php';
     class Produto{
 
         public $nome;
@@ -11,10 +11,11 @@
             $this->valor = $valor;
             $this->estoque = $estoque;
         }
+
+        public function registrar(){
+            // $dao = new Conexao();
+
+        }
     }
-
-
-
-
 
 ?>

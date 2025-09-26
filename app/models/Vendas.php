@@ -10,8 +10,11 @@
 
         public function __construct(Produto $produto, $quantidade) {
             $this->$produto = $produto;
-            $this->$quantidade = $quantidade;
+            $this->$quantidade = $quantidade;            
+            $this->data_venda = date("d/m/Y H:i:s");
+            $this->valor_total = $quantidade * $produto->valor;
         }
+        
     }
 
 
