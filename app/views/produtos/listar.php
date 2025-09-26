@@ -13,7 +13,7 @@
     <td><?php echo $p['quantidade']; ?></td>
     <td> 
         <form action = "index.php?controller=venda&action=adicionar" method="POST">
-            <input type = "hidden" name = "produto_id" value = "<?php echo $p['id']; ?>">
+            <input type = "hidden" name = "idProduto" value = "<?php echo $p['id']; ?>">
             <input type="number" name="quantidade" value = "1" min =" 1" max ="<?php echo max(1, $p['estoque']); ?>">
             <button type="submit"<?php echo $p['estoque'] <= 0 ?  'disabled' : ''; ?>>Comprar</button>
         </form>
