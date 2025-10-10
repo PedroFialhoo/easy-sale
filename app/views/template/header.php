@@ -9,8 +9,8 @@
   <header>
     <h1>Loja Virtual</h1>
     <nav>
-      <a href="index.php?controller=produto&action=listar">Produtos</a> |
-      <a href="index.php?controller=venda&action=historico">Histórico de Vendas</a>
+      <a href="index.php?controller=Produtos&action=listar">Produtos</a> |
+      <a href="index.php?controller=Vendas&action=historico">Histórico de Vendas</a>
     </nav>
   </header>
 
