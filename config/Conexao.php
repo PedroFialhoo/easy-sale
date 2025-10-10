@@ -33,8 +33,7 @@ class Conexao {
                         idProduto INT AUTO_INCREMENT PRIMARY KEY,
                         nome VARCHAR(100),
                         valor FLOAT,
-                        estoque INT,
-                        criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                        estoque INT
                     ) ENGINE=InnoDB";
 
             $this->pdo->exec($sql1);
@@ -44,8 +43,7 @@ class Conexao {
                         idProduto INT,
                         quantidade INT,
                         valorTotal FLOAT,
-                        dataVenda DATE,
-                        criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        dataVenda TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                         FOREIGN KEY (idProduto) REFERENCES produto(idProduto)
                     ) ENGINE=InnoDB";
 

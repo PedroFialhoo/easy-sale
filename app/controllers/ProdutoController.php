@@ -6,15 +6,16 @@ require_once __DIR__ . '/../../config/Conexao.php';
 
 class ProdutoController {
 
-    public function registrarProduto($id, $nome, $valor, $estoque) {
-        $p = new Produto($id, $nome, $valor, $estoque);
-        $p->registrar();
+    public function registrarProduto($nome, $valor, $estoque) {
+        $p = new Produto($nome, $valor, $estoque);
+        $resposta = $p->registrar();
+        return $resposta;
     }
 
-    public function buscarProduto($nome) {
+    public function buscarProduto($idProduto) {
         $c = new Conexao();
         $d = new Database($c);
-        return $d->buscarProduto($nome);
+        return $d->buscarProduto($idProduto);
     }
 
     public function processarRequest() {
@@ -25,6 +26,12 @@ class ProdutoController {
             $estoque = $_POST['cx_estoque'];
             $this->registrarProduto($id, $nome, $valor, $estoque);
         }
+    }
+
+    public function buscarTodosProdutos() {
+        $c = new Conexao();
+        $d = new Database($c);
+        return $d->buscarTodosProdutos();
     }
 }
 ?>
