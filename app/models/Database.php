@@ -27,7 +27,7 @@
             return $produto;
         }
 
-        return null; // se não encontrou nada
+        return null; 
     }
   }
 ?>
