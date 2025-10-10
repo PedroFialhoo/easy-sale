@@ -7,11 +7,13 @@
 </head>
 <body>
   <header>
-    <h1>Loja Virtual</h1>
-    <nav>
-      <a href="index.php?controller=produto&action=listar">Produtos</a> |
-      <a href="index.php?controller=venda&action=historico">Histórico de Vendas</a>
-    </nav>
+      <h1>Easy Sale - Painel de Administração</h1>
+
+      <nav>
+          <a href="?page=cadastrar">Cadastrar Produto</a>
+          <a href="?page=listar">Listar Produtos</a>
+          <a href="?page=historico">Histórico de Vendas</a>
+      </nav>
   </header>
 
   <main>
